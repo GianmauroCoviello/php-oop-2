@@ -1,10 +1,12 @@
 <?php
 
-    require_once __DIR__ .'/models/dogs.php';
-    require_once __DIR__ .'/models/cats.php';
-    require_once __DIR__ .'/models/birds.php';
+     require_once __DIR__ .'/Models/Products.php';
 
 
+     $product = new Products('Prodotti', 'https........', 25.99,'categories');
+
+     var_dump($product)
+   
 
 ?>
 
