@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* UTILITIES */
+header{
+    margin-bottom: 20px;
+}
+.row{
+    max-width: 1170px;
+    display: flex;
+    margin: 0 auto;
+}
+main .row{
+    flex-direction: column;
+}
+.card{
+    margin-top: 20px;
+    border: 1px solid black;
+    width: calc(100%/3);
+    height: 500px;
+}
