@@ -1,5 +1,6 @@
 <?php
 
+    // dichiaro la classe principale
     class  Products {
 
         public $name;

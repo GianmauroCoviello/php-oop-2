@@ -1,11 +1,20 @@
 <?php
+    // richiamo la classe Products all'interno dell'index
+    require_once __DIR__ .'/Models/Products.php';
+    require_once __DIR__ .'/Models/Food.php';
+    require_once __DIR__ .'/Models/Toy.php';
 
-     require_once __DIR__ .'/Models/Products.php';
+    // dichiaro una variabile che conterràil contenuto della classe con le instanze
+    $product = new Products('Prodotti', 'https........', 25.99,'Cane');
+
+    $Foods = new Food('food', 'https....', 12.99, 'Gatto', 2, 'carne, ossa di pollo');
+
+    $Toys = new Toy('toy', 'https....', 15.99, 'Gatto', +12,);
 
 
-     $product = new Products('Prodotti', 'https........', 25.99,'categories');
-
-     var_dump($product)
+    var_dump($product);
+    var_dump($Foods);
+    var_dump($Toys)
    
 
 ?>
