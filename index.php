@@ -7,24 +7,23 @@
 
     // dichiaro una variabile che conterràil contenuto della classe con le instanze
 
-    //  $product = new Products('Prodotti', 'https://arcaplanet.vtexassets.com/arquivos/ids/243820/royal-canin-size-cane-mini-adult.jpg', 25.99,'Cane');
-
-    // $Foods = new Food('food', 'https....', 12.99, 'Gatto', 2, 'carne, ossa di pollo');
-
-    // $Toys = new Toy('toy', 'https....', 15.99, 'Gatto', +12,);
-
-    // $Accesorys = new Accesory('Accesory', 'https .....', 35.99,'uccelli', 'plastic', 23);
-
-
-    // var_dump($product);
-    // var_dump($Foods);
-    // var_dump($Toys);
-    // var_dump($Accesorys)
-    $productsCard = [
+    
+    $productsFoodCard = [
         new Food('Royal Canin Mini Adult','https://arcaplanet.vtexassets.com/arquivos/ids/243820/royal-canin-size-cane-mini-adult.jpg',43.99,'Cane',545,'prosciutto, riso'),
         new Food('Almo Nature','https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-cane-adult-medium-pollo-e-riso.jpg',44.99,'Cane',600,'manzo, cereali'),
         new Food('Almo Nature Cat','https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg',34.99,'Gatto',400,'tonno,pollo e prosciutto'),
+        new Food('Mangime per Pesci Guppy in Fiocchi','https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg',34.99,'Pesce',400,'tonno,pollo e prosciutto'),
+
+        new Accesory('Voliera in legno','https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg',34.99,'Gatto','legno',83),
+        new Accesory('Almo Nature Cat','https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg',34.99,'Gatto','legno',83),
+
+        new Toy('Kong Classic', 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', 13.49, 'Gatto', 'Galleggia e rimbalza' , 20 ),
+        new Toy('Topini di peluche Trixie', 'https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg', 4.99, 'Gatto', 'Morbido con codina in corda' , 20 ),
     ]
+
+
+
+
    
 
 ?>
@@ -47,20 +46,30 @@
         
         <div class="row">
             <!-- <h2>I nostri prodotti</h2> -->
-            <?php foreach ($productsCard as $product): ?>
+            <?php foreach ($productsFoodCard as $product): ?>
 
                 <div class="card">
                     <div class="content-img-card">
-
                         <img src="<?php echo $product->image;?>" alt="">
-
                     </div>
                     <h2><?php echo $product->name;?></h2>
                     <p><?php echo $product->type;?></p>
                     <p>prezzo: <?php echo $product->price;?></p>
-                    <p>peso netto: <?php echo $product->weight;?></p>
-                    <p>Ingredienti: <?php echo $product->ingredients;?></p>
+                    <!-- condizione  -->
+                    <?php if (get_class($product) === 'Food') {?>
+                        
+                    
+                        <p>peso netto: <?php echo $product->weight; ?> </p>
+                        <p>Ingredienti: <?php echo $product->ingredients;?> </p>
 
+                    <?php } ?>
+                    <?php if (get_class($product) === 'Accesory') {?>
+                        
+                    
+                        <p>materiali: <?php echo $product->material; ?> </p>
+                        <p>dimensioni: <?php echo $product->size;?> </p>
+
+                    <?php } ?>
                 </div>
             <?php endforeach; ?>    
         </div>
