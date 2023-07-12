@@ -20,7 +20,7 @@ h2{
     margin-top: 20px;
     border: 1px solid black;
     width: calc(100%/3 - 20px);
-    height: 500px;
+
     margin: 10px;
     border-radius: 10px;
 }
@@ -36,3 +36,12 @@ img{
 
     
 }
+.content-description{
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.content-description p{
+    margin: 10px 0;
+
+}
+
