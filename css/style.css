@@ -12,12 +12,24 @@ header{
     display: flex;
     margin: 0 auto;
 }
-main .row{
-    flex-direction: column;
+h2{
+    width: 100%;
 }
 .card{
     margin-top: 20px;
     border: 1px solid black;
-    width: calc(100%/3);
+    width: calc(100%/3 - 20px);
     height: 500px;
+    margin: 10px;
+}
+.content-img-card{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+}
+img{
+    width: 100%;
+    width: 300px;
+    
 }
