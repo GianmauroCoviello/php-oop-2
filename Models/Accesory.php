@@ -7,7 +7,7 @@
         public $size;
 
 
-        public function __construct(string $name, string $image, float $price , String $type, string $material, Float $size) {
+        public function __construct(string $name, string $image, float $price , String $type, string $material, String $size) {
             // $this->var = $var;
             
             // ora ci richiamiamo il construct della classe padre

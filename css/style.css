@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /* UTILITIES */
 header{
     margin-bottom: 20px;
@@ -12,6 +13,11 @@ header{
     display: flex;
     margin: 0 auto;
     flex-wrap: wrap;
+}
+.col-subtitle{
+    width: 100%;
+    margin-top: 60px ;
+    margin-bottom: 20px;
 }
 h2{
     width: 100%;

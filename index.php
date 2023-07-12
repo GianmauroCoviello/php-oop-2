@@ -14,8 +14,8 @@
         new Food('Mangime per Pesci Guppy in Fiocchi','https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg',34.99,'Pesce',400,'tonno,pollo e prosciutto'),
 
         // Products Accesory
-        new Accesory('Voliera Wilma in legno','https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg',34.99,'Uccello','legno',83),
-        new Accesory('Cartucce Filtranti per Filtro EasyCrystal','https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg',34.99,'Pesce','legno',83),
+        new Accesory('Voliera Wilma in legno','https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg',34.99,'Uccello','legno','L 83 x P 67 x H 143cm'),
+        new Accesory('Cartucce Filtranti per Filtro EasyCrystal','https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg',34.99,'Pesce','Materiale Espanso','N/D'),
 
         // Products Toy
         new Toy('Kong Classic', 'https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg', 13.49, 'Cane', 'Galleggia e rimbalza' , 8.5 ),
@@ -46,6 +46,9 @@
     <main>
         
         <div class="row">
+            <div class="col-subtitle">
+                <h2>I NOSTRI PRODOTTI DISPONIBILI PER L'ACQUISTO:</h2>
+            </div>
             <!-- inseriamo un ciclo per ciclare le card -->
             <?php foreach ($productsCard as $product): ?>
 
@@ -83,7 +86,7 @@
                     </div>
                 </div>
             <?php endforeach; ?> 
-               <!-- fine del ciclo -->
+            <!-- fine del ciclo -->
         </div>
     </main>
     
